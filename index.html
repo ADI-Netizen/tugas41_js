@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Javascript DOM</title>
+</head>
+
+<body>
+    <p>Pilih Warna Background</p>
+
+    <select id="mySelect" onchange="myFunction()">
+        <option value="red" id="red">Merah</option>
+        <option value="blue" id="blue">Biru</option>
+        <option value="yellow" id="yellow">Kuning</option>
+        <option value="white" id="white">Putih</option>
+    </select>
+
+    <p>Saat Kamu Memilih Warna, Background Akan Berubah</p>
+
+    <script type="text/javascript">
+        function myFunction() {
+            document.getElementById("mySelect").addEventListener("click", function () {
+                var a = document.getElementById("mySelect").value;
+                document.body.style.backgroundColor = a;
+            })
+        }
+    </script>
+</body>
+
+</html>
